@@ -13,11 +13,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import { TarjetaInformacionComponent } from './misComponentes/tarjeta-informacion/tarjeta-informacion.component';
+import {CardModule} from 'primeng/card';
 @NgModule({
   declarations: [
     AppComponent,
     FormularioDetalleComponent,
-    FormularioCabeceraComponent
+    FormularioCabeceraComponent,
+    TarjetaInformacionComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import {ButtonModule} from 'primeng/button';
     MatDatepickerModule,
     MatNativeDateModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

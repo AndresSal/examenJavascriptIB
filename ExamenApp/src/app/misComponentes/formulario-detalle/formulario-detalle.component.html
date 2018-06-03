@@ -1,76 +1,38 @@
+<table>
+  <tr>
+    <td><input type="text" [placeholder]="nombreMateria"></td>
+    <td><input type="text" [placeholder]="codigo"></td>
+  </tr>
+  <tr>
+    <td><input type="text" [placeholder]="descripcion"></td>
+    <td><input type="text" [placeholder]="esActivo"></td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <input type="text" [placeholder]="fechaCreacion">
+    </td>
+
+    <td class="col-md-3">
+      <input type="text" [placeholder]="numeroHorasPorSemana">
+    </td>
+  </tr>
+  <tr>
+    <td class="col-md-3">
+      <input type="text" [placeholder]="estudianteId">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button pButton type="button" label="Limpiar"></button>
+    </td>
+    <td>
+      <button pButton type="button" label="Crear"></button>
+    </td>
+  </tr>
+</table>
 
 
-<h3 class="first">Formularios Detalle</h3>
-<div class="ui-g ui-fluid">
 
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="nombreMateria">
-    </div>
-  </div>
 
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <input type="text" pInputText>
-    </div>
-  </div>
 
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="descripcion">
-    </div>
-  </div>
-
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="esActivo">
-    </div>
-  </div>
-
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="fechaCreacion">
-    </div>
-  </div>
-
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="numeroHorasPorSemana">
-    </div>
-  </div>
-
-  <div class="ui-g-12 ui-md-4">
-    <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="estudianteId">
-    </div>
-  </div>
-
-</div>
-
-<br>
-<div>
-
-  <table>
-    <tr>
-      <td>
-          <span class="ui-float-label">
-            <input id="float-nombreMateria" type="text" size="30" pInputText>
-            <label for="float-nombreMateria">{{nombreMateria}}</label>
-          </span>
-      </td>
-      <td>
-        <span class="ui-float-label">
-        <input id="float-input" type="text"  pInputText>
-        <label for="float-input">{{descripcion}}</label>
-        </span>
-      </td>
-    </tr>
-  </table>
-</div>
 

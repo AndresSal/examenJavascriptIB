@@ -1,3 +1,5 @@
+
+
 <h3 class="first">Formularios Detalle</h3>
 <div class="ui-g ui-fluid">
 
@@ -10,8 +12,7 @@
 
   <div class="ui-g-12 ui-md-4">
     <div class="ui-inputgroup">
-      <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-      <input type="text" pInputText [placeholder]="codigo">
+      <input type="text" pInputText>
     </div>
   </div>
 
@@ -52,4 +53,24 @@
 
 </div>
 
+<br>
+<div>
+
+  <table>
+    <tr>
+      <td>
+          <span class="ui-float-label">
+            <input id="float-nombreMateria" type="text" size="30" pInputText>
+            <label for="float-nombreMateria">{{nombreMateria}}</label>
+          </span>
+      </td>
+      <td>
+        <span class="ui-float-label">
+        <input id="float-input" type="text"  pInputText>
+        <label for="float-input">{{descripcion}}</label>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
 

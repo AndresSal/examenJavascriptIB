@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MatInputModule} from '@angular/material/input';
 import { FormularioDetalleComponent } from './misComponentes/formulario-detalle/formulario-detalle.component';
 import { FormularioCabeceraComponent } from './misComponentes/formulario-cabecera/formulario-cabecera.component';
+import {MatButtonModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormularioCabeceraComponent } from './misComponentes/formulario-cabecer
   ],
   imports: [
     BrowserModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

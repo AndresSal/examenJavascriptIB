@@ -15,12 +15,14 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import { TarjetaInformacionComponent } from './misComponentes/tarjeta-informacion/tarjeta-informacion.component';
 import {CardModule} from 'primeng/card';
+import { CarruselComponent } from './misComponentes/carrusel/carrusel.component';
 @NgModule({
   declarations: [
     AppComponent,
     FormularioDetalleComponent,
     FormularioCabeceraComponent,
-    TarjetaInformacionComponent
+    TarjetaInformacionComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,

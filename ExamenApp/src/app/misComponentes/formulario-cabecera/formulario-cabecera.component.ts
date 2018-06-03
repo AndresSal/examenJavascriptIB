@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-formulario-cabecera',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioCabeceraComponent implements OnInit {
 
-  constructor() { }
+  nombrePrimero = 'Primer Nombre';
+  nombreSegundo = 'Segundo Nombre';
+  apellidoPrimero = 'Primer Apellido';
+  apellidoSegundo = 'Segundo Apellido';
+  fechaNacimiento = 'Fecha de Nacimiento';
+  semestreActual = 'Semestre Actual';
+  graduado = '¿Es graduado?';
+  constructor()
+  {
 
-  ngOnInit() {
+  }
+  ngOnInit()
+  {
+
   }
 
 }

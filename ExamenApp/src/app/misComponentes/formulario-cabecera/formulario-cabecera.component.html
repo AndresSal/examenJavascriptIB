@@ -1,3 +1,50 @@
-<p>
-  formulario-cabecera works!
-</p>
+<div class="example-container">
+
+  <table>
+    <tr>
+      <mat-form-field>
+        <input matInput [placeholder]="nombrePrimero">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [placeholder]="nombreSegundo">
+      </mat-form-field>
+    </tr>
+    <tr>
+      <mat-form-field>
+        <input matInput [placeholder]="apellidoPrimero">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [placeholder]="apellidoSegundo">
+      </mat-form-field>
+    </tr>
+
+    <tr>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" [placeholder]="fechaNacimiento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput [placeholder]="semestreActual" maxlength="1">
+      </mat-form-field>
+    </tr>
+  </table>
+
+  <mat-form-field>
+    <mat-select [placeholder]="graduado">
+      <mat-option value="option">SI</mat-option>
+      <mat-option value="option">NO</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="row">
+    <button mat-button>Limpiar!</button>
+    <button mat-button>Crear!</button>
+  </div>
+</div>
+
+
+

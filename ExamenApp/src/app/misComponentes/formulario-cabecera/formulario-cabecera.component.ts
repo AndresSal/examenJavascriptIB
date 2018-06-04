@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FormularioCabeceraComponent implements OnInit {
 
+  indice: number;
   nombrePrimero = 'Primer Nombre';
   nombreSegundo = 'Segundo Nombre';
   apellidoPrimero = 'Primer Apellido';
@@ -14,13 +15,15 @@ export class FormularioCabeceraComponent implements OnInit {
   fechaNacimiento = 'Fecha de Nacimiento';
   semestreActual = 'Semestre Actual';
   graduado = '¿Es graduado?';
-  constructor()
-  {
-
+  goalText = 'My first life goal';
+  estudiantes = [];
+  constructor() { }
+  ngOnInit() {
+    this.indice = this.estudiantes.length;
   }
-  ngOnInit()
-  {
-
+  guardarEstudiante() {
+    this.estudiantes.push(this.nombrePrimero);
+    this.nombrePrimero = '';
+    this.indice = this.estudiantes.length;
   }
-
 }

@@ -3,7 +3,7 @@
   <table>
     <tr>
       <mat-form-field>
-        <input matInput [placeholder]="nombrePrimero">
+        <input matInput placeholder="Aqui el nombre" [(ngModel)]="nombrePrimero">
       </mat-form-field>
 
       <mat-form-field>
@@ -42,9 +42,13 @@
 
   <div class="row">
     <button mat-button>Limpiar!</button>
-    <button mat-button>Crear!</button>
+    <button mat-button (click)="guardarEstudiante()">Crear!</button>
   </div>
 </div>
+
+<p class="life-container" *ngFor="let estudiante of estudiantes">
+  {{estudiante}}
+</p>
 
 
 

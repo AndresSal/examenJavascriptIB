@@ -18,6 +18,7 @@ import {CardModule} from 'primeng/card';
 import { CarruselComponent } from './misComponentes/carrusel/carrusel.component';
 import { PerfilComponent } from './misComponentes/perfil/perfil.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     InputTextModule,
     ButtonModule,
     CardModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

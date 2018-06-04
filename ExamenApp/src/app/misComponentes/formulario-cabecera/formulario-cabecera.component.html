@@ -7,36 +7,36 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput [placeholder]="nombreSegundo">
+        <input matInput placeholder="Segundo Nombre" [(ngModel)]="nombreSegundo">
       </mat-form-field>
     </tr>
     <tr>
       <mat-form-field>
-        <input matInput [placeholder]="apellidoPrimero">
+        <input matInput placeholder="Primer Apellido" [(ngModel)]="apellidoPrimero">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput [placeholder]="apellidoSegundo">
+        <input matInput placeholder="Segundo Apellido" [(ngModel)]="apellidoSegundo">
       </mat-form-field>
     </tr>
 
     <tr>
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" [placeholder]="fechaNacimiento">
+        <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento"  [(ngModel)]="fechaNacimiento">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput [placeholder]="semestreActual" maxlength="1">
+        <input matInput placeholder="Semestre Actual" maxlength="1" [(ngModel)]="semestreActual">
       </mat-form-field>
     </tr>
   </table>
 
   <mat-form-field>
-    <mat-select [placeholder]="graduado">
-      <mat-option value="option">SI</mat-option>
-      <mat-option value="option">NO</mat-option>
+    <mat-select placeholder="¿Es graduado?" [(ngModel)]="graduado">
+      <mat-option value=true>SI</mat-option>
+      <mat-option value=false>NO</mat-option>
     </mat-select>
   </mat-form-field>
 
@@ -47,7 +47,8 @@
 </div>
 
 <p class="life-container" *ngFor="let estudiante of estudiantes">
-  {{estudiante}}
+  {{estudiante.primerNombre}} | {{estudiante.primerApellido}} | {{estudiante.fechaNacimiento}} | {{estudiante.semestreActual}}
+
 </p>
 
 

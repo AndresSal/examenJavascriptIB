@@ -14,8 +14,7 @@
   <div class="col-md-6">
     <h2>Cabecera</h2>
     <app-formulario-cabecera
-      (dioClickEnCrear)="alertar()"
-      (creoEstudiante)="recibirArregloEstudiantes()">
+      (salidaEstudiante)= "recibirArregloEstudiantes($event)">
     </app-formulario-cabecera>
   </div>
 </div>

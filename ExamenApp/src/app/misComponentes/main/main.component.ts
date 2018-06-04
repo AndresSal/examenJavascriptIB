@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
+import {Estudiante} from '../../Estudiante';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  arregloEstudiantes: Array<any>;
+  arregloEstudiantes = [];
   estudiantesEjemplo = [
     {
       nombre: 'Andres',
@@ -32,17 +32,17 @@ export class MainComponent implements OnInit {
     },
   ];
 
-  recibirArregloEstudiantes(arreglo: Array <any>) {
-    this.arregloEstudiantes = arreglo;
+  recibirArregloEstudiantes($event) {
+    console.log('recibi al estudiante: ', $event)
+    this.arregloEstudiantes.push($event);
     alert('recibi el cambio!!');
-    console.log(this.arregloEstudiantes);
+    console.log('el arreglo es: ', this.arregloEstudiantes);
   }
 
   constructor() { }
 
   ngOnInit() {
   }
-
   alertar() {
     alert('¡Enhorabuena! ha creado un nuevo estudiante');
   }

@@ -16,8 +16,8 @@ export class FormularioCabeceraComponent implements OnInit {
   semestreActual: number;
   graduado: boolean;
 
-  @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
-  @Output() salidaEstudiante: EventEmitter<any> = new EventEmitter<any>();
+  // @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
+  @Output() salidaEstudiante = new EventEmitter();
   listaEstudiantesCreados = [];
 
   constructor() { }
@@ -34,12 +34,19 @@ export class FormularioCabeceraComponent implements OnInit {
                                         this.semestreActual);
 
     this.listaEstudiantesCreados.push(estudiante);
-    this.dioClickEnCrear.emit(true);
-    this.salidaEstudiante.emit(this.listaEstudiantesCreados);
+    console.log(this.listaEstudiantesCreados[this.indice]);
+    this.enviar(estudiante);
+    // this.dioClickEnCrear.emit(true);
     this.nombrePrimero = '';
     this.nombreSegundo = '';
     this.apellidoPrimero = '';
     this.apellidoSegundo = '';
     this.indice = this.listaEstudiantesCreados.length;
   }
+
+  enviar(estudianteCreado: Estudiante) {
+    console.log('emitiendo informacion');
+    this.salidaEstudiante.emit(estudianteCreado);
+  }
+
 }

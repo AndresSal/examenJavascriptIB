@@ -18,7 +18,7 @@ export class FormularioCabeceraComponent implements OnInit {
 
   @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
   @Output() salidaEstudiante: EventEmitter<any> = new EventEmitter<any>();
-  listaEstudiantesCreados: Estudiante[];
+  listaEstudiantesCreados = [];
 
   constructor() { }
   ngOnInit() {

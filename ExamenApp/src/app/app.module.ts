@@ -16,13 +16,17 @@ import {ButtonModule} from 'primeng/button';
 import { TarjetaInformacionComponent } from './misComponentes/tarjeta-informacion/tarjeta-informacion.component';
 import {CardModule} from 'primeng/card';
 import { CarruselComponent } from './misComponentes/carrusel/carrusel.component';
+import { PerfilComponent } from './misComponentes/perfil/perfil.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
     FormularioDetalleComponent,
     FormularioCabeceraComponent,
     TarjetaInformacionComponent,
-    CarruselComponent
+    CarruselComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { CarruselComponent } from './misComponentes/carrusel/carrusel.component'
     MatNativeDateModule,
     InputTextModule,
     ButtonModule,
-    CardModule
+    CardModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,6 +21,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { SeleccionadorCabeceraComponent } from './misComponentes/seleccionador-cabecera/seleccionador-cabecera.component';
 import {DataGridModule} from 'primeng/datagrid';
+import { MainComponent } from './misComponentes/main/main.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {DataGridModule} from 'primeng/datagrid';
     TarjetaInformacionComponent,
     CarruselComponent,
     PerfilComponent,
-    SeleccionadorCabeceraComponent
+    SeleccionadorCabeceraComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

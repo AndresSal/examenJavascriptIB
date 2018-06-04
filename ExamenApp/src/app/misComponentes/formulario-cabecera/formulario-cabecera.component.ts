@@ -1,30 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-// import {Estudiante} from '../../Estudiante';
-class Estudiante {
-  primerNombre: string;
-  segundoNombre: string;
-  primerApellido: string;
-  segundoApellido: string;
-  fechaNacimiento: Date;
-  graduado: boolean;
-  semestreActual: number;
-
-  constructor (nombreUno: string,
-               nombreDos: string,
-               apellidoUno: string,
-               apellidoDos: string,
-               fechaNacimiento: Date,
-               graduado: boolean,
-               semestreActual: number) {
-    this.primerNombre = nombreUno;
-    this.segundoNombre = nombreDos;
-    this.primerApellido = apellidoUno;
-    this.segundoApellido = apellidoDos;
-    this.fechaNacimiento = fechaNacimiento;
-    this.graduado = graduado;
-    this.semestreActual = semestreActual;
-  }
-}
+import {Estudiante} from '../../Estudiante';
 
 @Component({
   selector: 'app-formulario-cabecera',
@@ -37,34 +12,34 @@ export class FormularioCabeceraComponent implements OnInit {
   nombreSegundo: string;
   apellidoPrimero: string;
   apellidoSegundo: string;
-  fechaNacimiento: Date;
+  fechaNac: Date;
   semestreActual: number;
   graduado: boolean;
-  // goalText = 'My first life goal';
+
   @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
-  @Output() creoEstudiante: EventEmitter<Estudiante[]> = new EventEmitter<Estudiante[]>();
-  listaEstudiantesCreados = [];
+  @Output() salidaEstudiante: EventEmitter<any> = new EventEmitter<any>();
+  listaEstudiantesCreados: Estudiante[];
+
   constructor() { }
   ngOnInit() {
     this.indice = this.listaEstudiantesCreados.length;
   }
   guardarEstudiante() {
-    const nuevoEstudiante = new Estudiante(this.nombrePrimero,
-                                this.nombreSegundo,
-                                this.apellidoPrimero,
-                                this.apellidoSegundo,
-                                this.fechaNacimiento,
-                                this.graduado,
-                                this.semestreActual);
+    const estudiante = new Estudiante  (this.nombrePrimero,
+                                        this.nombreSegundo,
+                                        this.apellidoPrimero,
+                                        this.apellidoSegundo,
+                                        this.fechaNac,
+                                        this.graduado,
+                                        this.semestreActual);
 
-    this.listaEstudiantesCreados.push(nuevoEstudiante);
+    this.listaEstudiantesCreados.push(estudiante);
     this.dioClickEnCrear.emit(true);
-    this.creoEstudiante.emit(this.listaEstudiantesCreados);
+    this.salidaEstudiante.emit(this.listaEstudiantesCreados);
     this.nombrePrimero = '';
     this.nombreSegundo = '';
     this.apellidoPrimero = '';
     this.apellidoSegundo = '';
-    this.semestreActual = 0;
     this.indice = this.listaEstudiantesCreados.length;
   }
 }

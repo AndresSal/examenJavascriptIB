@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
+import {Estudiante} from './Estudiante';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-
+export class AppComponent implements OnChanges {
+  @Input() arregloEstudiantes: Estudiante[];
+  ngOnChanges(algoCambio) {
+    console.log('algo ->', algoCambio);
+  }
   alertar() {
-    alert('Se ha un nuevo estudiante');
+    alert('¡Enhorabuena! ha creado un nuevo estudiante');
   }
 }

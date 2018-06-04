@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-
+// import {Estudiante} from '../../Estudiante';
 class Estudiante {
   primerNombre: string;
   segundoNombre: string;
@@ -32,8 +32,6 @@ class Estudiante {
   styleUrls: ['./formulario-cabecera.component.css']
 })
 export class FormularioCabeceraComponent implements OnInit {
-
-
   indice: number;
   nombrePrimero: string;
   nombreSegundo: string;
@@ -44,11 +42,11 @@ export class FormularioCabeceraComponent implements OnInit {
   graduado: boolean;
   // goalText = 'My first life goal';
   @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
-
-  estudiantes = [];
+  @Output() creoEstudiante: EventEmitter<Estudiante[]> = new EventEmitter<Estudiante[]>();
+  listaEstudiantesCreados = [];
   constructor() { }
   ngOnInit() {
-    this.indice = this.estudiantes.length;
+    this.indice = this.listaEstudiantesCreados.length;
   }
   guardarEstudiante() {
     const nuevoEstudiante = new Estudiante(this.nombrePrimero,
@@ -59,13 +57,14 @@ export class FormularioCabeceraComponent implements OnInit {
                                 this.graduado,
                                 this.semestreActual);
 
-    this.estudiantes.push(nuevoEstudiante);
+    this.listaEstudiantesCreados.push(nuevoEstudiante);
     this.dioClickEnCrear.emit(true);
+    this.creoEstudiante.emit(this.listaEstudiantesCreados);
     this.nombrePrimero = '';
     this.nombreSegundo = '';
     this.apellidoPrimero = '';
     this.apellidoSegundo = '';
     this.semestreActual = 0;
-    this.indice = this.estudiantes.length;
+    this.indice = this.listaEstudiantesCreados.length;
   }
 }

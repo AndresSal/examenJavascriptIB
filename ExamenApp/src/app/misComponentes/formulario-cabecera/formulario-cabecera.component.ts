@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 class Estudiante {
   primerNombre: string;
@@ -42,7 +42,8 @@ export class FormularioCabeceraComponent implements OnInit {
   fechaNacimiento: Date;
   semestreActual: number;
   graduado: boolean;
-  goalText = 'My first life goal';
+  // goalText = 'My first life goal';
+  @Output() dioClickEnCrear: EventEmitter<boolean> = new EventEmitter();
 
   estudiantes = [];
   constructor() { }
@@ -59,7 +60,7 @@ export class FormularioCabeceraComponent implements OnInit {
                                 this.semestreActual);
 
     this.estudiantes.push(nuevoEstudiante);
-
+    this.dioClickEnCrear.emit(true);
     this.nombrePrimero = '';
     this.nombreSegundo = '';
     this.apellidoPrimero = '';

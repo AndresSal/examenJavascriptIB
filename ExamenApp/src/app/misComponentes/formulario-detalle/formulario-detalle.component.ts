@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioDetalleComponent implements OnInit {
 
-  nombreMateria = 'Nombre de Materia';
-  codigo = 'Código de Materia';
-  descripcion = 'Descripción de Materia';
-  esActivo = '¿Está activa la materia?';
-  fechaCreacion = 'Fecha de Creación';
-  numeroHorasPorSemana = 'Número de horas por semana';
-  estudianteId = 'ID de Estudiante';
+  nombreMateria: string;
+  codigo: string;
+  descripcion: string;
+  esActivo: boolean;
+  fechaCreacion: Date;
+  numeroHorasPorSemana: number;
+  estudianteId: number;
   constructor() { }
 
   ngOnInit() {

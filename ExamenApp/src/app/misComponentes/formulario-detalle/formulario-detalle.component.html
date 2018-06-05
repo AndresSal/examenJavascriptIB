@@ -1,19 +1,19 @@
 <table>
   <tr>
-    <td><input type="text" placeholder="Nombre de Materia" ></td>
-    <td><input type="text" placeholder="Código de Materia"></td>
+    <td><input type="text" placeholder="Nombre de Materia" [(ngModel)]="nombreMateria"></td>
+    <td><input type="text" placeholder="Código de Materia"[(ngModel)]="codigo"></td>
   </tr>
   <tr>
-    <td><input type="text" placeholder="Descripcion de Materia"></td>
-    <td><input type="text" placeholder="¿Está activa la materia?"></td>
+    <td><input type="text" placeholder="Descripcion de Materia" [(ngModel)]="descripcion"></td>
+    <td><input type="text" placeholder="¿Está activa la materia?"[(ngModel)]="esActivo"></td>
   </tr>
   <tr>
     <td class="col-md-3">
-      <input type="text" placeholder="Fecha de Creación">
+      <input type="text" placeholder="Fecha de Creación" [(ngModel)]="fechaCreacion">
     </td>
 
     <td class="col-md-3">
-      <input type="text" placeholder="Número de horas por semana">
+      <input type="text" placeholder="Número de horas por semana" [(ngModel)]="numeroHorasPorSemana">
     </td>
   </tr>
   <tr>

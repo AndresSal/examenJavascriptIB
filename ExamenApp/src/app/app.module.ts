@@ -22,6 +22,8 @@ import {FormsModule} from '@angular/forms';
 import { SeleccionadorCabeceraComponent } from './misComponentes/seleccionador-cabecera/seleccionador-cabecera.component';
 import {DataGridModule} from 'primeng/datagrid';
 import { MainComponent } from './misComponentes/main/main.component';
+import {CalendarModule} from 'primeng/calendar';
+import {InputSwitchModule} from 'primeng/inputswitch';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,10 @@ import { MainComponent } from './misComponentes/main/main.component';
     CardModule,
     NgbModule.forRoot(),
     FormsModule,
-    DataGridModule
+    DataGridModule,
+    CalendarModule,
+    InputSwitchModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

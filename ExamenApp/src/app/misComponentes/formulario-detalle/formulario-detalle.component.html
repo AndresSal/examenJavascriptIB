@@ -5,16 +5,18 @@
   </tr>
   <tr>
     <td><input type="text" placeholder="Descripcion de Materia" [(ngModel)]="descripcion"></td>
-    <td><input type="text" placeholder="¿Está activa la materia?"[(ngModel)]="esActivo"></td>
   </tr>
   <tr>
     <td class="col-md-3">
-      <input type="text" placeholder="Fecha de Creación" [(ngModel)]="fechaCreacion">
+      <p-calendar placeholder="Fecha de Creación" [(ngModel)]="fechaCreacion"></p-calendar>
     </td>
 
     <td class="col-md-3">
       <input type="text" placeholder="Número de horas por semana" [(ngModel)]="numeroHorasPorSemana">
     </td>
+  </tr>
+  <tr>
+    <p-inputSwitch onLabel="Si" offLabel="No" placeholder="¿Está activa la materia?" [(ngModel)]="esActivo"></p-inputSwitch>
   </tr>
   <tr>
     <td>

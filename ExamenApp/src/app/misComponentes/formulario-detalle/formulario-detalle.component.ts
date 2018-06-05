@@ -12,7 +12,7 @@ export class FormularioDetalleComponent implements OnInit {
   nombreMateria: string;
   codigo: string;
   descripcion: string;
-  esActivo: boolean;
+  esActivo = false;
   fechaCreacion: Date;
   numeroHorasPorSemana: number;
   estudianteId: number;

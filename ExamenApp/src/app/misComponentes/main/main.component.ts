@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
   arregloEstudiantes = [];
   estudianteElegido: Estudiante;
   materiaNueva: Materia;
+  indicador = false;
   identificador = 0;
 
   recibirArregloEstudiantes($event) {
@@ -32,6 +33,7 @@ export class MainComponent implements OnInit {
     this.materiaNueva = $event;
     console.log('recibí la materia ', this.materiaNueva);
     this.estudianteElegido.misMaterias.push(this.materiaNueva);
+    this.indicador = true;
     console.log('ahora mi estudiante tiene la siguiente info: ', this.estudianteElegido);
   }
 

@@ -1,6 +1,7 @@
 <div class="row">
-  <div class="col-md-12" *ngIf="miColeccion.length > 0">
-    <p-table [value]="miColeccion[0].misMaterias">
+  <!--<div class="col-md-12" *ngIf="estudianteQuiereDetalle">-->
+  <div class="col-md-12" *ngIf="detallesEstudiantes.length > 0">
+    <p-table [value]="detallesEstudiantes">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre Materia</th>
@@ -13,10 +14,12 @@
       </ng-template>
       <ng-template pTemplate="body" let-registro>
         <tr>
-          <td>{{registro.primerNombre}}</td>
-          <td>{{registro.primerApellido}}</td>
-          <td>{{registro.fechaNacimiento}}</td>
-          <td>{{registro.misMaterias.values(1)}}</td>
+          <td>{{registro.nombreMateria}}</td>
+          <td>{{registro.descripcionMateria}}</td>
+          <td>{{registro.codigoMateria}}</td>
+          <td>{{registro.esActiva}}</td>
+          <td>{{registro.fechaCreacion}}</td>
+          <td>{{registro.numeroHorasPorMateria}}</td>
           <!--<td>{{nombreEstudiante}}</td>-->
           <!--<td>{{apellidoEstudiante}}</td>-->
           <!--<td>{{fechaNacimiento}}</td>-->

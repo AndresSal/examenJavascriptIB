@@ -19,6 +19,7 @@ export class FormularioDetalleComponent implements OnInit {
 
   @Input() estudianteRecibido;
   @Output () enviarAlMain = new EventEmitter();
+  @Output () enviarSenial: EventEmitter <boolean> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -39,5 +40,6 @@ export class FormularioDetalleComponent implements OnInit {
     console.log('acabe de enviar la materia', nuevaMateria, 'al main');
     this.indiceMateria = this.materiasGeneradas.length;
   }
+
 
 }

@@ -5,19 +5,23 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
   templateUrl: './tabla-principal.component.html',
   styleUrls: ['./tabla-principal.component.css']
 })
-export class TablaPrincipalComponent implements OnInit , OnChanges {
-  @Input () arregloPrincipal: Array<any>;
-  miColeccion: Array<any>;
-  @Input () materias
+export class TablaPrincipalComponent implements OnInit, OnChanges{
+  @Input () estudianteQuiereDetalle;
+  detallesEstudiantes = [];
+  @Input() bandera;
   constructor() { }
-
-  ngOnChanges(cambiosRealizados): void {
-    console.log('cambios en la tarjeta => ', cambiosRealizados);
-    this.miColeccion = this.arregloPrincipal;
-  }
   ngOnInit() {
+    // this.mostrarDetalleMaterias();
   }
 
+  ngOnChanges () {
+    this.detallesEstudiantes = this.estudianteQuiereDetalle.misMaterias;
+  }
 
-
+  // mostrarDetalleMaterias() {
+  //   if (this.bandera === true) {
+  //     this.detallesEstudiantes = this.estudianteQuiereDetalle.misMaterias;
+  //     this.bandera = false;
+  //   }
+  // }
 }

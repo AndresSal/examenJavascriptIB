@@ -1,5 +1,6 @@
 import {Component, OnChanges, OnInit} from '@angular/core';
 import {Estudiante} from '../../Estudiante';
+import {Materia} from '../../Materia';
 
 @Component({
   selector: 'app-main',
@@ -9,6 +10,7 @@ import {Estudiante} from '../../Estudiante';
 export class MainComponent implements OnInit {
   arregloEstudiantes = [];
   estudianteElegido: Estudiante;
+  materiaNueva: Materia;
   estudiantesEjemplo = [
     {
       nombre: 'Andres',
@@ -45,6 +47,11 @@ export class MainComponent implements OnInit {
     console.log('recibo de nuevo: ', idEleccion);
     this.estudianteElegido = this.arregloEstudiantes[idEleccion - 1];
     console.log('haz escogido al estudiante', this.estudianteElegido);
+  }
+
+  reciboMateria($event) {
+    this.materiaNueva = $event;
+    console.log('recibí la materia ', this.materiaNueva);
   }
 
   constructor() { }

@@ -26,7 +26,7 @@
   <div class="col-md-12" *ngFor="let est of arregloEstudiantes">
     <app-seleccionador-cabecera
       [elEstudianteCreado]="est"
-      (numeroEleccion)="recibirEleccion($event)">
+        (numeroEleccion)="recibirEleccion($event)">
 
     </app-seleccionador-cabecera>
   </div>
@@ -37,6 +37,7 @@
   <div class="col-md-6">
     <h2>Detalle</h2>
     <app-formulario-detalle
+      [estudianteRecibido]="estudianteElegido"
     (enviarAlMain)="reciboMateria($event)">
 
     </app-formulario-detalle>

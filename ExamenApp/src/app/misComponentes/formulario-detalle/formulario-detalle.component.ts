@@ -17,7 +17,7 @@ export class FormularioDetalleComponent implements OnInit {
   numeroHorasPorSemana: number;
   materiasGeneradas = [];
 
-  @Input() idDeMiEstudiante: number;
+  @Input() estudianteRecibido;
   @Output () enviarAlMain = new EventEmitter();
   constructor() { }
 
@@ -32,8 +32,8 @@ export class FormularioDetalleComponent implements OnInit {
                                       this.descripcion,
                                       this.esActivo,
                                       this.fechaCreacion,
-                                      this.numeroHorasPorSemana
-                                      );
+                                      this.numeroHorasPorSemana,
+                                      this.estudianteRecibido.idEstudiante);
     this.materiasGeneradas.push(nuevaMateria);
     this.enviarAlMain.emit(nuevaMateria);
     console.log('acabe de enviar la materia', nuevaMateria, 'al main');

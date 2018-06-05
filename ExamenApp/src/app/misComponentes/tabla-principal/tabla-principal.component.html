@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="col-md-12">
-    <p-table [value]="miColeccion">
+  <div class="col-md-12" *ngIf="miColeccion.length > 0">
+    <p-table [value]="miColeccion[0].misMaterias">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre Materia</th>

@@ -1,39 +1,43 @@
-<table>
-  <tr>
-    <td><input type="text" placeholder="Nombre de Materia" [(ngModel)]="nombreMateria"></td>
-    <td><input type="text" placeholder="Código de Materia"[(ngModel)]="codigo"></td>
-  </tr>
-  <tr>
-    <td><input type="text" placeholder="Descripcion de Materia" [(ngModel)]="descripcion"></td>
-  </tr>
-  <tr>
-    <td class="col-md-3">
-      <p-calendar placeholder="Fecha de Creación" [(ngModel)]="fechaCreacion"></p-calendar>
-    </td>
+<div class="row">
+  <div class="col-md-12" *ngIf="estudianteRecibido">
+    <table>
+      <tr>
+        <td><input type="text" placeholder="Nombre de Materia" [(ngModel)]="nombreMateria"></td>
+        <td><input type="text" placeholder="Código de Materia"[(ngModel)]="codigo"></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="Descripcion de Materia" [(ngModel)]="descripcion"></td>
+      </tr>
+      <tr>
+        <td class="col-md-3">
+          <p-calendar placeholder="Fecha de Creación" [(ngModel)]="fechaCreacion"></p-calendar>
+        </td>
 
-    <td class="col-md-3">
-      <input type="text" placeholder="Número de horas por semana" [(ngModel)]="numeroHorasPorSemana">
-    </td>
-  </tr>
-  <tr>
-    <p-inputSwitch onLabel="Si" offLabel="No" placeholder="¿Está activa la materia?" [(ngModel)]="esActivo"></p-inputSwitch>
-  </tr>
-  <tr>
-    <td>
-      <button pButton type="button" label="Limpiar"></button>
-    </td>
-    <td>
-      <button pButton type="button" label="Crear" (click)="generarRegistroMateria()"></button>
-    </td>
-  </tr>
-</table>
+        <td class="col-md-3">
+          <input type="text" placeholder="Número de horas por semana" [(ngModel)]="numeroHorasPorSemana">
+        </td>
+      </tr>
+      <tr>
+        <p-inputSwitch onLabel="Si" offLabel="No" placeholder="¿Está activa la materia?" [(ngModel)]="esActivo"></p-inputSwitch>
+      </tr>
+      <tr>
+        <td>
+          <button pButton type="button" label="Limpiar"></button>
+        </td>
+        <td>
+          <button pButton type="button" label="Crear" (click)="generarRegistroMateria()"></button>
+        </td>
+      </tr>
+    </table>
 
-<table>
-  <p class="life-container" *ngFor="let materia of materiasGeneradas">
-    {{materia.nombreMateria}} | {{materia.descripcionMateria}} | {{materia.fechaCreacion}} | {{materia.numeroHorasPorSemana}}
+    <table>
+      <p class="life-container" *ngFor="let materia of materiasGeneradas">
+        {{materia.nombreMateria}} | {{materia.descripcionMateria}} | {{materia.fechaCreacion}} | {{materia.numeroHorasPorSemana}}
 
-  </p>
-</table>
+      </p>
+    </table>
+  </div>
+</div>
 
 
 

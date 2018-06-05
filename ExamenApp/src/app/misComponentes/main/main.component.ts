@@ -12,6 +12,7 @@ export class MainComponent implements OnInit {
   estudianteElegido: Estudiante;
   materiaNueva: Materia;
   identificador = 0;
+
   recibirArregloEstudiantes($event) {
     console.log('recibi al estudiante: ', $event);
     this.arregloEstudiantes.push($event);
@@ -22,6 +23,7 @@ export class MainComponent implements OnInit {
   recibirEleccion($event) {
     const idEleccion = $event;
     console.log('recibo de nuevo: ', idEleccion);
+    // this.estudianteElegido = this.arregloEstudiantes.reduce(estudiante => estudiante.idEstudiante === idEleccion);
     this.estudianteElegido = this.arregloEstudiantes[idEleccion - 1];
     console.log('haz escogido al estudiante', this.estudianteElegido);
   }

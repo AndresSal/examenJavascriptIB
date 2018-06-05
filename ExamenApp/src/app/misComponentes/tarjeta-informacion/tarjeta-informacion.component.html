@@ -1,20 +1,24 @@
-<p-card title="Titulo" [style]="{width: '360px'}" styleClass="ui-card-shadow">
-  <p-header>
-    <img src="Card" src="" alt="Imagen del estudiante">
-  </p-header>
-  <div>
-    PRIMER NOMBRE: {{estudianteDescrito.primerNombre}}  SEGUNDO NOMBRE: {{estudianteDescrito.segundoNombre}}
-    <p>
-      PRIMER APELLIDO: {{estudianteDescrito.primerApellido}}  SEGUNDO APELLIDO: {{estudianteDescrito.segundoApellido}}
-    </p>
-    <p>
-      FECHA DE NACIMIENTO: {{estudianteDescrito.fechaNacimiento}}
-    </p>
-    <p>
-      ¿ES GRADUADO?: {{estudianteDescrito.graduado}}
-    </p>
-    <p>
-      SEMESTRE ACTUAL: {{estudianteDescrito.semestreActual}}
-    </p>
+<div class="row" >
+  <div class="col-md-12" *ngIf="estudianteRecibido">
+    <p-card title="Titulo" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+      <p-header>
+        <img src="Card" src="" alt="Imagen del estudiante">
+      </p-header>
+      <div>
+        PRIMER NOMBRE: {{estudianteDescrito.primerNombre}}  SEGUNDO NOMBRE: {{estudianteDescrito.segundoNombre}}
+        <p>
+          PRIMER APELLIDO: {{estudianteDescrito.primerApellido}}  SEGUNDO APELLIDO: {{estudianteDescrito.segundoApellido}}
+        </p>
+        <p>
+          FECHA DE NACIMIENTO: {{estudianteDescrito.fechaNacimiento}}
+        </p>
+        <p>
+          ¿ES GRADUADO?: {{estudianteDescrito.graduado}}
+        </p>
+        <p>
+          SEMESTRE ACTUAL: {{estudianteDescrito.semestreActual}}
+        </p>
+      </div>
+    </p-card>
   </div>
-</p-card>
+</div>

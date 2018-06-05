@@ -1,3 +1,18 @@
-<p>
-  tabla-principal works!
-</p>
+<p-table>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>NOmbre</th>
+      <th>Apellido</th>
+      <th>FechaNacimiento</th>
+      <th>Materia</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+    <tr>
+      <td>{{car.primerNombre}}</td>
+      <td>{{car.primerApellido}}</td>
+      <td>{{car.fechaNacimiento}}</td>
+      <td>{{car.misMaterias}}</td>
+    </tr>
+  </ng-template>
+</p-table>

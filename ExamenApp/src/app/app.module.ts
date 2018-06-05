@@ -25,6 +25,7 @@ import { MainComponent } from './misComponentes/main/main.component';
 import {CalendarModule} from 'primeng/calendar';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import { TablaPrincipalComponent } from './misComponentes/tabla-principal/tabla-principal.component';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TablaPrincipalComponent } from './misComponentes/tabla-principal/tabla-
     FormsModule,
     DataGridModule,
     CalendarModule,
-    InputSwitchModule
+    InputSwitchModule,
+    TableModule
 
   ],
   providers: [],

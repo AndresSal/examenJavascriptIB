@@ -24,6 +24,7 @@ import {DataGridModule} from 'primeng/datagrid';
 import { MainComponent } from './misComponentes/main/main.component';
 import {CalendarModule} from 'primeng/calendar';
 import {InputSwitchModule} from 'primeng/inputswitch';
+import { TablaPrincipalComponent } from './misComponentes/tabla-principal/tabla-principal.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {InputSwitchModule} from 'primeng/inputswitch';
     CarruselComponent,
     PerfilComponent,
     SeleccionadorCabeceraComponent,
-    MainComponent
+    MainComponent,
+    TablaPrincipalComponent
   ],
   imports: [
     BrowserModule,

@@ -8,15 +8,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CarruselComponent implements OnInit {
 
-  @Input() estudianteGeneral;
-  listaEstudiantes = [];
+  @Input() listaEstudiantes;
 
   constructor() {}
 
   ngOnInit() {
-  }
-
-  llenar() {
-    this.listaEstudiantes.push(this.estudianteGeneral);
   }
 }

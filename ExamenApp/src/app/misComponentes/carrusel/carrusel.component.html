@@ -2,23 +2,9 @@
 <ngb-carousel>
   <ng-template ngbSlide>
     <img src="https://mcdn01.gittigidiyor.net/34312/tn50/343120385_tn50_0.jpg?1528068022" alt="Random first slide">
-    <div class="carousel-caption">
-      <h3>10 seconds between slides...</h3>
-      <p>This carousel uses customized default values.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img src="https://mcdn01.gittigidiyor.net/34312/tn50/343120385_tn50_0.jpg?1528068022"  alt="Random second slide">
-    <div class="carousel-caption">
-      <h3>No keyboard...</h3>
-      <p>This carousel uses customized default values.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img src="https://mcdn01.gittigidiyor.net/34312/tn50/343120385_tn50_0.jpg?1528068022" alt="Random third slide">
-    <div class="carousel-caption">
-      <h3>And no wrap after last slide.</h3>
-      <p>This carousel uses customized default values.</p>
+    <div class="carousel-caption" *ngFor="let est of listaEstudiantes">
+      <h3>{{est.primerNombre}}</h3>
+      <p>{{est.primerApellido}}</p>
     </div>
   </ng-template>
 </ngb-carousel>

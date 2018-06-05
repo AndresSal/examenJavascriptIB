@@ -52,6 +52,8 @@ export class MainComponent implements OnInit {
   reciboMateria($event) {
     this.materiaNueva = $event;
     console.log('recibí la materia ', this.materiaNueva);
+    this.estudianteElegido.misMaterias.push(this.materiaNueva);
+    console.log('ahora mi estudiante tiene la siguiente info: ', this.estudianteElegido);
   }
 
   constructor() { }

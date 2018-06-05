@@ -25,6 +25,7 @@ export class FormularioCabeceraComponent implements OnInit {
     this.indice = this.listaEstudiantesCreados.length;
   }
   guardarEstudiante() {
+    const lasMaterias = [];
     const estudiante = new Estudiante  (this.indice + 1,
                                         this.nombrePrimero,
                                         this.nombreSegundo,
@@ -32,7 +33,8 @@ export class FormularioCabeceraComponent implements OnInit {
                                         this.apellidoSegundo,
                                         this.fechaNac,
                                         this.graduado,
-                                        this.semestreActual);
+                                        this.semestreActual,
+                                        lasMaterias);
 
     this.listaEstudiantesCreados.push(estudiante);
     console.log(this.listaEstudiantesCreados[this.indice]);

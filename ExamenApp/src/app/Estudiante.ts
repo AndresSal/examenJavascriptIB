@@ -1,3 +1,5 @@
+import {Materia} from './Materia';
+
 export class Estudiante {
   constructor (
     public idEstudiante?: number,
@@ -7,6 +9,7 @@ export class Estudiante {
     public segundoApellido?: string,
     public fechaNacimiento?: Date,
     public graduado?: boolean,
-    public semestreActual?: number
+    public semestreActual?: number,
+    public misMaterias?: Array<any>
   ) { }
 }

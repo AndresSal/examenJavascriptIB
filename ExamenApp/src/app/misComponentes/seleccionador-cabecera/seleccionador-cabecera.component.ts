@@ -8,6 +8,8 @@ import {Estudiante} from '../../Estudiante';
 })
 export class SeleccionadorCabeceraComponent implements OnInit , OnChanges {
 
+  @Input () elEstudianteCreado;
+
   @Input() nombreEstudiante: string;
   @Input() apellidoEstudiante: string;
   @Input() idEstudiante: number;

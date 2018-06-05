@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Materia} from '../../Materia';
 
 @Component({
@@ -15,9 +15,9 @@ export class FormularioDetalleComponent implements OnInit {
   esActivo = false;
   fechaCreacion: Date;
   numeroHorasPorSemana: number;
-  estudianteId: number;
   materiasGeneradas = [];
 
+  @Input() idDeMiEstudiante: number;
   @Output () enviarAlMain = new EventEmitter();
   constructor() { }
 
@@ -32,8 +32,7 @@ export class FormularioDetalleComponent implements OnInit {
                                       this.descripcion,
                                       this.esActivo,
                                       this.fechaCreacion,
-                                      this.numeroHorasPorSemana,
-                                      this.estudianteId
+                                      this.numeroHorasPorSemana
                                       );
     this.materiasGeneradas.push(nuevaMateria);
     this.enviarAlMain.emit(nuevaMateria);

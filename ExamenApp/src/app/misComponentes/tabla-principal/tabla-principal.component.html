@@ -1,24 +1,24 @@
-<p-table>
+<p-table [value]="miColeccion">
   <ng-template pTemplate="header">
     <tr>
       <th>NOmbre</th>
       <th>Apellido</th>
       <th>FechaNacimiento</th>
-      <th>Nombre Materia</th>
-      <th>horas por Materia</th>
+      <th>Graduado</th>
+      <th>semestre Actual</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body">
+  <ng-template pTemplate="body" let-registro>
     <tr>
-      <!--<td>{{registro.primerNombre}}</td>-->
-      <!--<td>{{registro.primerApellido}}</td>-->
-      <!--<td>{{registro.fechaNacimiento}}</td>-->
-      <!--<td>{{registro.misMaterias.values(1)}}</td>-->
-      <td>{{nombreEstudiante}}</td>
-      <td>{{apellidoEstudiante}}</td>
-      <td>{{fechaNacimiento}}</td>
-      <td>{{nombreMateria}}</td>
-      <td>{{horasXMateria}}</td>
+      <td>{{registro.primerNombre}}</td>
+      <td>{{registro.primerApellido}}</td>
+      <td>{{registro.fechaNacimiento}}</td>
+      <td>{{registro.misMaterias.values(1)}}</td>
+      <!--<td>{{nombreEstudiante}}</td>-->
+      <!--<td>{{apellidoEstudiante}}</td>-->
+      <!--<td>{{fechaNacimiento}}</td>-->
+      <!--<td>{{eresGraduado}}</td>-->
+      <!--<td>{{actualSemestre}}</td>-->
     </tr>
   </ng-template>
 </p-table>

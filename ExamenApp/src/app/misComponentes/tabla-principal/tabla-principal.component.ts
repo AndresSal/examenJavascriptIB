@@ -5,11 +5,13 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
   templateUrl: './tabla-principal.component.html',
   styleUrls: ['./tabla-principal.component.css']
 })
-export class TablaPrincipalComponent implements OnInit , OnChanges{
+export class TablaPrincipalComponent implements OnInit , OnChanges {
 
   @Input() nombreEstudiante: string;
   @Input() apellidoEstudiante: string;
   @Input() fechaNacimiento: Date;
+  @Input() eresGraduado: boolean;
+  @Input() actualSemestre: number;
   @Input() nombreMateria: string;
   @Input() horasXMateria: number;
   @Input () arregloPrincipal: Array<any>;

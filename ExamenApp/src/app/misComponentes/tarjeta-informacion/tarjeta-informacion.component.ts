@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Estudiante} from '../../Estudiante';
 
 @Component({
@@ -6,18 +6,19 @@ import {Estudiante} from '../../Estudiante';
   templateUrl: './tarjeta-informacion.component.html',
   styleUrls: ['./tarjeta-informacion.component.css']
 })
-export class TarjetaInformacionComponent implements OnInit {
+export class TarjetaInformacionComponent implements OnInit , OnChanges {
 
-  // @Input()estudianteNombreUno: string;
-  // @Input()estudianteNombreDos: string;
-  // @Input()estudianteApellidoUno: string;
-  // @Input()estudianteApellidoDos: string;
-  // @Input()estudianteFecha: string;
-
-  @Input () estudianteDescrito: Estudiante;
-  constructor() { }
+  @Input () estudianteRecibido: Estudiante;
+  estudianteDescrito: Estudiante;
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(cambiosRealizados): void {
+    console.log('cambios en la tarjeta => ', cambiosRealizados);
+    this.estudianteDescrito = this.estudianteRecibido;
   }
 
 }

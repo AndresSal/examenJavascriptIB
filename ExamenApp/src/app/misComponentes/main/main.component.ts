@@ -34,7 +34,7 @@ export class MainComponent implements OnInit {
   ];
 
   recibirArregloEstudiantes($event) {
-    console.log('recibi al estudiante: ', $event)
+    console.log('recibi al estudiante: ', $event);
     this.arregloEstudiantes.push($event);
     alert('recibi el cambio!!');
     console.log('el arreglo es: ', this.arregloEstudiantes);
@@ -42,7 +42,8 @@ export class MainComponent implements OnInit {
 
   recibirEleccion($event) {
     const idEleccion = $event;
-    this.estudianteElegido = this.arregloEstudiantes.reduce(estudiante => idEleccion === estudiante.idEstudiante);
+    console.log('recibo de nuevo: ', idEleccion);
+    this.estudianteElegido = this.arregloEstudiantes[idEleccion - 1];
     console.log('haz escogido al estudiante', this.estudianteElegido);
   }
 

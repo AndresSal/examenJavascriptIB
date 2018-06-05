@@ -20,7 +20,8 @@ export class SeleccionadorCabeceraComponent implements OnInit , OnChanges {
   ngOnInit() {
   }
   ngOnChanges(algoCambio) {
-    console.log('esto paso =>', algoCambio);
+    // console.log('esto paso =>', algoCambio);
+    console.log('recibi el id ', this.idEstudiante);
   }
 
   elegirEstudiante() {

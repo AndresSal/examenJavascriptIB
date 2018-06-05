@@ -24,7 +24,8 @@
   <div class="col-md-12" *ngFor="let est of arregloEstudiantes">
     <app-seleccionador-cabecera
       [nombreEstudiante]="est.primerNombre"
-      [apellidoEstudiante]="est.primerApellido" (numeroEleccion)="recibirEleccion($event)">
+      [apellidoEstudiante]="est.primerApellido"
+      [idEstudiante]="est.idEstudiante" (numeroEleccion)="recibirEleccion($event)">
 
     </app-seleccionador-cabecera>
   </div>
@@ -39,7 +40,7 @@
   <div class="col-md-6">
     <h2>Tarjeta</h2>
     <app-tarjeta-informacion
-    [estudianteDescrito]="estudianteElegido">
+    [estudianteRecibido]="estudianteElegido">
 
     </app-tarjeta-informacion>
   </div>

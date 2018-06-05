@@ -8,6 +8,7 @@ import {Estudiante} from '../../Estudiante';
 })
 export class MainComponent implements OnInit {
   arregloEstudiantes = [];
+  estudianteElegido: Estudiante;
   estudiantesEjemplo = [
     {
       nombre: 'Andres',
@@ -37,6 +38,12 @@ export class MainComponent implements OnInit {
     this.arregloEstudiantes.push($event);
     alert('recibi el cambio!!');
     console.log('el arreglo es: ', this.arregloEstudiantes);
+  }
+
+  recibirEleccion($event) {
+    const idEleccion = $event;
+    this.estudianteElegido = this.arregloEstudiantes.reduce(estudiante => idEleccion === estudiante.idEstudiante);
+    console.log('haz escogido al estudiante', this.estudianteElegido);
   }
 
   constructor() { }

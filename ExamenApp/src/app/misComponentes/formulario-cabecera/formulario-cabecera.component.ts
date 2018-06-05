@@ -25,7 +25,8 @@ export class FormularioCabeceraComponent implements OnInit {
     this.indice = this.listaEstudiantesCreados.length;
   }
   guardarEstudiante() {
-    const estudiante = new Estudiante  (this.nombrePrimero,
+    const estudiante = new Estudiante  (this.indice + 1,
+                                        this.nombrePrimero,
                                         this.nombreSegundo,
                                         this.apellidoPrimero,
                                         this.apellidoSegundo,

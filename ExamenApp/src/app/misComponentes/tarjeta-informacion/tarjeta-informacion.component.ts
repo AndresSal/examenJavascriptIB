@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Estudiante} from '../../Estudiante';
 
 @Component({
   selector: 'app-tarjeta-informacion',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetaInformacionComponent implements OnInit {
 
+  // @Input()estudianteNombreUno: string;
+  // @Input()estudianteNombreDos: string;
+  // @Input()estudianteApellidoUno: string;
+  // @Input()estudianteApellidoDos: string;
+  // @Input()estudianteFecha: string;
+
+  @Input () estudianteDescrito: Estudiante;
   constructor() { }
 
   ngOnInit() {

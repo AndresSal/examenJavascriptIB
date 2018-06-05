@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {Estudiante} from '../../Estudiante';
 
 @Component({
@@ -10,12 +10,22 @@ export class SeleccionadorCabeceraComponent implements OnInit , OnChanges {
 
   @Input() nombreEstudiante: string;
   @Input() apellidoEstudiante: string;
-  constructor() { }
+  @Input() idEstudiante: number;
+  miEleccion: number;
+
+  @Output() numeroEleccion = new EventEmitter();
+  constructor() {
+  }
 
   ngOnInit() {
   }
   ngOnChanges(algoCambio) {
     console.log('esto paso =>', algoCambio);
+  }
+
+  elegirEstudiante() {
+    this.miEleccion = this.idEstudiante;
+    this.numeroEleccion.emit(this.miEleccion);
   }
 
 }

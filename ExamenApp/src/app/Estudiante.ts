@@ -1,5 +1,6 @@
 export class Estudiante {
   constructor (
+    public idEstudiante?: number,
     public primerNombre?: string,
     public segundoNombre?: string,
     public primerApellido?: string,

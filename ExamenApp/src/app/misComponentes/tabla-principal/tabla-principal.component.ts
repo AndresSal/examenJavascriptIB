@@ -7,6 +7,11 @@ import {Component, Input, OnChanges, OnInit} from '@angular/core';
 })
 export class TablaPrincipalComponent implements OnInit , OnChanges{
 
+  @Input() nombreEstudiante: string;
+  @Input() apellidoEstudiante: string;
+  @Input() fechaNacimiento: Date;
+  @Input() nombreMateria: string;
+  @Input() horasXMateria: number;
   @Input () arregloPrincipal: Array<any>;
   miColeccion: Array<any>;
   constructor() { }

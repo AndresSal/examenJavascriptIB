@@ -51,8 +51,12 @@
     </app-tarjeta-informacion>
   </div>
 </div>
-<div class="row">
-    <app-tabla-principal [arregloPrincipal]="arregloEstudiantes"></app-tabla-principal>
+<div class="row" *ngFor="let registro of arregloEstudiantes">
+    <app-tabla-principal
+      [nombreEstudiante]="registro.primerNombre"
+      [apellidoEstudiante]="registro.primerApellido"
+      [fechaNacimiento]="registro.fechaNacimiento"
+    []></app-tabla-principal>
 </div>
 
 
